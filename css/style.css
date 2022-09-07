@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap');
+@import url('fontawesome-free-6.2.0-web/css/all.min.css');
+
+:root{/* Representa al objeto html */
+    /* Variables css */
+    --color1: #001E38;
+    --color2: #555555;
+    --color3: #1A2F46;
+    --color4: #CD9F63;
+    --color5: #C88800;
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --gris-claro: #DDDDDD;
+    --gris-oscuro: #333333;
+}
+
+body{/* Asi se define una regla para una etiqueta */
+    background-color: var(--color-blanco);/* RGB en Hexadecimal 0123456789ABCDEF */
+    /* Color de fondo */
+    color: var(--gris-oscuro);
+    /* Color de texto */
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    margin: 0; /* Elimina el margen por defecto de body */
+    font-size: 18px;
+    line-height: 1.5em;/* em es una medida porcentual respecto al tamnaño de la fuente */
+}
+
+img{
+    display: block;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;/* Asi se elimina el margen por defecto de los 
+    encabezados */
+    margin-bottom: 0.5em;
+}
+
+h1{
+    font-weight: 900; /* Peso o Grosor de la fuente */
+    font-size: 48px; /* Tamaño de la fuente */
+}
+h2{
+    font-weight: 200;
+    font-size: 32px;
+    text-transform: lowercase; /* Para que se muestren en minúscula */
+    letter-spacing: -2px; /* Espacio entre letras */
+}
+h3{
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase; /* Para que se muestre en mayúscula */
+}
+
+#main-header{/* Asi se define una regla para un objeto por su id
+    empieza con # */
+    background-color: var(--color1);
+    color: var(--color-blanco);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#main-header h1{
+    margin-bottom: 0;
+}
+#main-header p{/* El espacio indica dentro de */
+    margin-bottom: 0;
+}
+
+
+#nosotros{
+    background-color: var(--color-negro);
+    color: var(--color5);
+}
+
+#conferencia{
+    background-color: var(--color3);
+    color: var(--color-blanco);
+}
+
+#empresa{
+    background-color: var(--gris-oscuro);
+    color: var(--color-blanco);
+}
+#cursos{
+    color: var(--color-negro);
+    background-color: var(--gris-claro);
+}
+
+#anuncio{
+    background-image: url("../images/concierto.jpg");/* Imagen de fondo */
+    background-size: cover; /* Para que la imagen de fondo cubra todo espacio del contenedor */
+    background-position: left center; /* Posición de la imágen de fondo X,Y (Horizontal y Vertical) */
+    text-align: right;
+    color: var(--color-blanco);
+}
+
+#valores{
+    background-color: var(--color1);
+    color: var(--color-blanco);
+    text-align: center;
+}
+
+#valores i{
+    color: var(--color5);
+    margin-bottom: 16px;
+}
+
+#historia{
+    background-color: var(--color5);
+    color: var(--color-blanco);
+}
+#aviso{
+    background-image: url("../images/familia.jpg");
+    background-size: cover;
+    color: var(--color-negro);
+    background-attachment: fixed; /* Para que la imagen de fondo quede fija respecto a
+    la ventana del navegador */
+}
+#eventos{
+    background-color: var(--color2);
+    color: var(--color-blanco);
+}
+#main-footer{
+    background-color: var(--gris-oscuro);
+    color: var(--gris-claro);
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.padded{/* Asi se define una regla para una clase
+    empieza con punto */
+    /* Varios objetos pueden usar la misma clase */
+    padding-top: 90px;
+    padding-bottom: 90px;
+    /* Distancia del borde al contenido (como un margen interno) */
+}
+.container{
+    max-width: 1440px;/* Ancho máximo */
+    margin-left: auto;
+    margin-right: auto;
+    /* Al ser auto ambos márgenes son iguales 
+    (por lo que se ve centrado) */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row{
+    display: flex; /* Por defecto acomoda los objetos
+    que contiene uno al costado del otro */
+
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col{
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /* Parta que las cajas tengan el mismo ancho */
+    flex-basis: 0;
+    flex-grow: 1;
+
+    box-sizing: border-box; /* Para que el padding no incremente el ancho */
+}
+.col-50{
+    flex-basis: 50%;
+    max-width: 50%;
+    /* Para que el ancho de la caja sea el 50% de su contenedor */
+}
+.col-66{
+    flex-basis: 66.67%;
+    max-width: 66.67%;
+    /* Para que el ancho de la caja sea el 50% de su contenedor */
+}
+
+.img-fluid{
+    width: 100%;/* Así se indica que el ancho de este objeto será igual al ancho del objeto que lo contiene */
+    height: auto;/* Para que el alto sea proporcional al ancho */
+}
+.alineacion-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mega-texto{
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -3px;
+    line-height: 0.9em;
+}
+.texto-importante{
+    color: var(--color4);
+}
